@@ -1,0 +1,173 @@
+- generic [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - table [ref=f2e3]:
+      - rowgroup [ref=f2e4]:
+        - row [ref=f2e5]:
+          - cell [ref=f2e6]:
+            - paragraph [ref=f2e8]:
+              - link "HR SYSTEM -V2.1-MULTI MERIDIAN SDN BHD" [ref=f2e9] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f2e10]: HR SYSTEM
+                - generic [ref=f2e11]: "-V2.1"
+                - generic [ref=f2e12]: "-MULTI MERIDIAN SDN BHD"
+          - cell [ref=f2e13]:
+            - paragraph [ref=f2e15]:
+              - text: Hello,
+              - link "Superuser" [ref=f2e16] [cursor=pointer]:
+                - /url: /Account/ChangePassword
+              - text: "!"
+              - link "Log off" [ref=f2e17] [cursor=pointer]:
+                - /url: /Account/LogOff
+              - link "Account" [ref=f2e18] [cursor=pointer]:
+                - /url: /Account
+    - list [ref=f2e20]:
+      - listitem [ref=f2e21]:
+        - link "Home" [ref=f2e22] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=f2e23]:
+        - link "Registration" [ref=f2e24] [cursor=pointer]:
+          - /url: /Registration
+      - listitem [ref=f2e25]:
+        - link "Setup" [ref=f2e26] [cursor=pointer]:
+          - /url: /SetUp
+      - listitem [ref=f2e27]:
+        - link "Holiday Setup" [ref=f2e28] [cursor=pointer]:
+          - /url: /LogSetup
+      - listitem [ref=f2e29]:
+        - link "Payroll Components" [ref=f2e30] [cursor=pointer]:
+          - /url: /PayRollValue
+      - listitem [ref=f2e31]:
+        - link "Leave and Dayoff" [ref=f2e32] [cursor=pointer]:
+          - /url: /Timesheet
+      - listitem [ref=f2e33]:
+        - link "Run Payroll" [ref=f2e34] [cursor=pointer]:
+          - /url: /PayRollTransaction
+      - listitem [ref=f2e35]:
+        - link "Report" [ref=f2e36] [cursor=pointer]:
+          - /url: /Report
+      - listitem [ref=f2e37]:
+        - link "Attendance" [ref=f2e38] [cursor=pointer]:
+          - /url: /Attendance
+  - generic [ref=f2e40]:
+    - table [ref=f2e41]:
+      - rowgroup [ref=f2e42]:
+        - row [ref=f2e43]:
+          - cell [ref=f2e44]:
+            - heading "Registration" [level=2] [ref=f2e45]
+          - cell "Branch - Petaling Jaya,Sarawak,Kedah,Penang,Johor Bharu,Negeri Sembilan,Perak,Ipoh,Melaka,Sabah" [ref=f2e46]
+    - generic [ref=f2e49]:
+      - list [ref=f2e50]:
+        - listitem [ref=f2e51]:
+          - link "Uncompleted Employee" [ref=f2e52] [cursor=pointer]:
+            - /url: "#tabstrip-1"
+        - listitem [ref=f2e53]:
+          - link "All Employee" [active] [ref=f2e54] [cursor=pointer]:
+            - /url: "#tabstrip-2"
+        - listitem [ref=f2e55]:
+          - link "Assign Employee To IClock" [ref=f2e56] [cursor=pointer]:
+            - /url: "#tabstrip-3"
+        - listitem [ref=f2e57]:
+          - link "Guard Training" [ref=f2e58] [cursor=pointer]:
+            - /url: "#tabstrip-4"
+        - listitem [ref=f2e59]:
+          - link "Company Registration" [ref=f2e60] [cursor=pointer]:
+            - /url: "#tabstrip-5"
+      - generic [ref=f2e518]:
+        - list [ref=f2e519]:
+          - listitem [ref=f2e520]:
+            - link "Active Employee" [ref=f2e521] [cursor=pointer]:
+              - /url: "#AllEmployeetabstrip-1"
+          - listitem [ref=f2e522]:
+            - link "Terminated Employee" [ref=f2e523] [cursor=pointer]:
+              - /url: "#AllEmployeetabstrip-2"
+          - listitem [ref=f2e524]:
+            - link "Resigned Employee" [ref=f2e525] [cursor=pointer]:
+              - /url: "#AllEmployeetabstrip-3"
+          - listitem [ref=f2e526]:
+            - link "Leave Without Notice" [ref=f2e527] [cursor=pointer]:
+              - /url: "#AllEmployeetabstrip-4"
+        - generic [ref=f2e529]:
+          - table [ref=f2e530]:
+            - rowgroup [ref=f2e531]:
+              - row [ref=f2e532]:
+                - cell "Active Employees" [ref=f2e533]
+                - cell [ref=f2e535]:
+                  - link "Export to Excel" [ref=f2e536] [cursor=pointer]:
+                    - /url: javascript:;
+          - link "Add New Employee" [ref=f2e539] [cursor=pointer]:
+            - /url: javascript:;
+          - generic [ref=f2e541]:
+            - generic [ref=f2e542]: Drag a column header and drop it here to group by that column
+            - table [ref=f2e545]:
+              - rowgroup [ref=f2e561]:
+                - row [ref=f2e562]:
+                  - columnheader [ref=f2e563]:
+                    - link "Action" [ref=f2e566] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=Id-asc
+                  - columnheader [ref=f2e567]:
+                    - link "#" [ref=f2e570] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=Index-asc
+                  - columnheader [ref=f2e571]:
+                    - link "Employee No" [ref=f2e574] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=EmployeeNo-asc
+                  - columnheader [ref=f2e575]:
+                    - link "Alternate Emp No" [ref=f2e578] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=AlternateEmpNo-asc
+                  - columnheader [ref=f2e579]:
+                    - link "Employee Name" [ref=f2e582] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=EmployeeName-asc
+                  - columnheader [ref=f2e583]:
+                    - link "Gender" [ref=f2e586] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=Gender-asc
+                  - columnheader [ref=f2e587]:
+                    - link "Date Of Join" [ref=f2e590] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=dateofjoin-asc
+                  - columnheader [ref=f2e591]:
+                    - link "Department" [ref=f2e594] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=Department-asc
+                  - columnheader [ref=f2e595]:
+                    - link "Position" [ref=f2e598] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=Position-asc
+                  - columnheader [ref=f2e599]:
+                    - link "Payrule" [ref=f2e602] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=PayruleName-asc
+                  - columnheader [ref=f2e603]:
+                    - link "Identity Card Number" [ref=f2e606] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=IdentityCardNumber-asc
+                  - columnheader [ref=f2e607]:
+                    - link "Shift" [ref=f2e610] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=Shift-asc
+                  - columnheader [ref=f2e611]:
+                    - link "Branch" [ref=f2e614] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=BranchName-asc
+                  - columnheader [ref=f2e615]:
+                    - link "Employee Group" [ref=f2e618] [cursor=pointer]:
+                      - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903&EmployeeGrid-sort=EmployeeGroup-asc
+            - generic [ref=f2e619]:
+              - generic [ref=f2e620]: Loading...
+              - table [ref=f2e624]:
+                - rowgroup [ref=f2e640]:
+                  - row [ref=f2e641]:
+                    - cell [ref=f2e642]
+            - generic [ref=f2e643]:
+              - link "seek-w" [ref=f2e644]:
+                - /url: "#"
+              - link "arrow-w" [ref=f2e646]:
+                - /url: "#"
+              - list [ref=f2e648]:
+                - listitem [ref=f2e649]:
+                  - generic [ref=f2e650]: "0"
+              - link "arrow-e" [ref=f2e651]:
+                - /url: "#"
+              - link "seek-e" [ref=f2e653]:
+                - /url: "#"
+              - generic [ref=f2e655]:
+                - generic [ref=f2e657] [cursor=pointer]:
+                  - generic [ref=f2e658]: "2000"
+                  - generic [ref=f2e659]: select
+                - text: items per page
+              - link "Refresh" [ref=f2e661] [cursor=pointer]:
+                - /url: /Registration/Employee_Read?ParamValue=Employee&PartialViewName=EmployeeIndex&_=1790763746903
+              - generic [ref=f2e663]: No items to display
+  - contentinfo [ref=f2e174]:
+    - paragraph [ref=f2e176]: © 2026 - HRSystem

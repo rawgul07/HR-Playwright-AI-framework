@@ -1,6 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 
 const UI_TRANSITION_TIMEOUT = 10_000;
+const DROPDOWN_OPTION_TIMEOUT = 15_000;
 
 export const employeeRegistrationTabs = [
   'Employee Information',
@@ -34,7 +35,7 @@ export interface PayrollInformationData {
 export interface OfficialInformationData {
   identityCardNumber: string;
   branch: string;
-  staffCategory: string;
+  staffCategory?: string;
   department: string;
   position: string;
   shift: string;
@@ -204,7 +205,9 @@ export class EmployeeRegistrationDialog {
   async fillOfficialInformation(data: OfficialInformationData): Promise<void> {
     await this.officialFields.identityCardNumber.fill(data.identityCardNumber);
     await this.selectCombo(this.officialFields.branch, data.branch);
-    await this.selectCombo(this.officialFields.staffCategory, data.staffCategory);
+    if (data.staffCategory) {
+      await this.selectCombo(this.officialFields.staffCategory, data.staffCategory);
+    }
     await this.selectCombo(this.officialFields.department, data.department);
     await this.selectCombo(this.officialFields.position, data.position);
     await this.selectCombo(this.officialFields.shift, data.shift);
@@ -215,6 +218,38 @@ export class EmployeeRegistrationDialog {
     await this.selectCombo(this.officialFields.employeeGroup, data.employeeGroup);
     await this.selectCombo(this.officialFields.team, data.team);
     await this.selectCombo(this.officialFields.zone, data.zone);
+  }
+
+  async fillRequiredOfficialInformation(
+    branch: string,
+    identityCardNumber: string,
+    staffCategory: string,
+  ): Promise<void> {
+    await this.officialFields.identityCardNumber.fill(identityCardNumber);
+    await this.selectCombo(this.officialFields.branch, branch);
+    await this.selectCombo(this.officialFields.staffCategory, staffCategory);
+    await this.officialFields.department.fill('');
+    await this.officialFields.department.pressSequentially('Indirect-PP');
+    await this.officialFields.department.press('Tab');
+    await expect.poll(async () => (await this.officialFields.department.inputValue()).trim(), {
+      timeout: DROPDOWN_OPTION_TIMEOUT,
+    }).toBe('Indirect-PP');
+
+    const observedValues: Array<[string, Locator, string]> = [
+      ['Position', this.officialFields.position],
+      ['Shift', this.officialFields.shift],
+      ['Attendance Device Type', this.officialFields.attendanceDeviceType],
+      ['Leave Group', this.officialFields.leaveGroup],
+      ['Transfer To IClock App [Bio Metric]', this.officialFields.iclockPrivilege],
+      ['Holiday Profile', this.officialFields.holidayProfile],
+      ['Employee Group', this.officialFields.employeeGroup],
+      ['Team', this.officialFields.team],
+      ['Zone', this.officialFields.zone],
+    ];
+
+    for (const [fieldName, input] of observedValues) {
+      await this.selectFirstComboOption(input, fieldName);
+    }
   }
 
   async fillPassportInformation(data: PassportInformationData): Promise<void> {
@@ -268,10 +303,39 @@ export class EmployeeRegistrationDialog {
     await this.closeButton.click();
   }
 
-  private async selectCombo(input: Locator, value: string): Promise<void> {
-    await input.locator('xpath=following-sibling::span').click();
-    await this.selectVisibleOption(value);
-    await expect(input).toHaveValue(value, { timeout: UI_TRANSITION_TIMEOUT });
+  private async selectCombo(input: Locator, value: string, fieldName = 'Dropdown'): Promise<void> {
+    await expect(input).toBeEnabled({ timeout: DROPDOWN_OPTION_TIMEOUT });
+    await input.locator('xpath=..').locator('.k-select').click();
+    await input.press('ArrowDown');
+    const popup = this.page.locator('.k-animation-container:visible').last();
+    const option = popup.getByText(value, { exact: true });
+    try {
+      await option.waitFor({ state: 'visible', timeout: DROPDOWN_OPTION_TIMEOUT });
+      await option.scrollIntoViewIfNeeded({ timeout: DROPDOWN_OPTION_TIMEOUT });
+      await option.click({ force: true, timeout: DROPDOWN_OPTION_TIMEOUT });
+      await popup.waitFor({ state: 'hidden', timeout: DROPDOWN_OPTION_TIMEOUT });
+    } catch (error) {
+      if (!(error instanceof Error && error.name === 'TimeoutError')) {
+        throw error;
+      }
+
+      await input.fill('');
+      await input.pressSequentially(value);
+      await input.press('ArrowDown');
+      await input.press('Enter');
+    }
+    try {
+      await expect.poll(async () => (await input.inputValue()).trim(), {
+        timeout: DROPDOWN_OPTION_TIMEOUT,
+      }).toBe(value.trim());
+    } catch (error) {
+      if (error instanceof Error && error.name === 'TimeoutError') {
+        throw new Error(`${fieldName} did not retain the requested value "${value}".`, {
+          cause: error,
+        });
+      }
+      throw error;
+    }
   }
 
   private async selectDropdown(input: Locator, value: string): Promise<void> {
@@ -283,10 +347,51 @@ export class EmployeeRegistrationDialog {
 
   private async selectVisibleOption(value: string): Promise<void> {
     const popup = this.page.locator('.k-animation-container:visible').last();
-    const option = popup.getByText(value, { exact: true });
-    await option.waitFor({ state: 'visible', timeout: UI_TRANSITION_TIMEOUT });
-    await option.scrollIntoViewIfNeeded({ timeout: UI_TRANSITION_TIMEOUT });
-    await option.click({ force: true, timeout: UI_TRANSITION_TIMEOUT });
-    await popup.waitFor({ state: 'hidden', timeout: UI_TRANSITION_TIMEOUT });
+    await expect(popup).toBeVisible({ timeout: DROPDOWN_OPTION_TIMEOUT });
+    await expect.poll(async () => (await popup.locator('.k-item').allInnerTexts())
+      .map((text) => text.trim()), {
+      timeout: DROPDOWN_OPTION_TIMEOUT,
+    }).toContain(value.trim());
+    const availableOptions = (await popup.locator('.k-item').allInnerTexts())
+      .map((text) => text.trim());
+    const matchingOption = availableOptions.find(
+      (text) => text.localeCompare(value.trim(), undefined, { sensitivity: 'accent' }) === 0,
+    );
+    if (!matchingOption) {
+      throw new Error(`The open dropdown did not expose the requested option "${value}".`);
+    }
+
+    const liveOption = popup.getByText(matchingOption, { exact: true });
+    await liveOption.waitFor({ state: 'visible', timeout: UI_TRANSITION_TIMEOUT });
+    await liveOption.scrollIntoViewIfNeeded({ timeout: UI_TRANSITION_TIMEOUT });
+    await liveOption.click({ force: true, timeout: UI_TRANSITION_TIMEOUT });
+    await popup.waitFor({ state: 'hidden', timeout: DROPDOWN_OPTION_TIMEOUT });
   }
+
+  private async selectFirstComboOption(input: Locator, fieldName: string): Promise<void> {
+    await input.locator('xpath=..').locator('.k-select').click();
+    await input.press('ArrowDown');
+    const popup = this.page.locator('.k-animation-container:visible').last();
+    await expect(popup).toBeVisible({ timeout: DROPDOWN_OPTION_TIMEOUT });
+    await expect.poll(() => popup.locator('.k-item').count(), {
+      timeout: DROPDOWN_OPTION_TIMEOUT,
+    }).toBeGreaterThan(0);
+    const options = (await popup.locator('.k-item').allInnerTexts())
+      .map((value) => value.trim())
+      .filter((value) => value && !/^--?\s*select/i.test(value));
+    const optionValue = options[0];
+    if (!optionValue) {
+      throw new Error(`No selectable options are available for ${fieldName}.`);
+    }
+
+    const option = popup.getByText(optionValue, { exact: true }).first();
+    await option.waitFor({ state: 'visible', timeout: DROPDOWN_OPTION_TIMEOUT });
+    await option.scrollIntoViewIfNeeded({ timeout: DROPDOWN_OPTION_TIMEOUT });
+    await option.click({ force: true, timeout: DROPDOWN_OPTION_TIMEOUT });
+    await popup.waitFor({ state: 'hidden', timeout: DROPDOWN_OPTION_TIMEOUT });
+    await expect.poll(async () => (await input.inputValue()).trim(), {
+      timeout: DROPDOWN_OPTION_TIMEOUT,
+    }).toBe(optionValue);
+  }
+
 }

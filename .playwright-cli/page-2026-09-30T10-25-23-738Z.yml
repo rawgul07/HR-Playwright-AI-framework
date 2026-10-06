@@ -1,0 +1,186 @@
+- generic [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - table [ref=f2e3]:
+      - rowgroup [ref=f2e4]:
+        - row [ref=f2e5]:
+          - cell [ref=f2e6]:
+            - paragraph [ref=f2e8]:
+              - link "HR SYSTEM -V2.1-MULTI MERIDIAN SDN BHD" [ref=f2e9] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f2e10]: HR SYSTEM
+                - generic [ref=f2e11]: "-V2.1"
+                - generic [ref=f2e12]: "-MULTI MERIDIAN SDN BHD"
+          - cell [ref=f2e13]:
+            - paragraph [ref=f2e15]:
+              - text: Hello,
+              - link "Superuser" [ref=f2e16] [cursor=pointer]:
+                - /url: /Account/ChangePassword
+              - text: "!"
+              - link "Log off" [ref=f2e17] [cursor=pointer]:
+                - /url: /Account/LogOff
+              - link "Account" [ref=f2e18] [cursor=pointer]:
+                - /url: /Account
+    - list [ref=f2e20]:
+      - listitem [ref=f2e21]:
+        - link "Home" [ref=f2e22] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=f2e23]:
+        - link "Registration" [ref=f2e24] [cursor=pointer]:
+          - /url: /Registration
+      - listitem [ref=f2e25]:
+        - link "Setup" [ref=f2e26] [cursor=pointer]:
+          - /url: /SetUp
+      - listitem [ref=f2e27]:
+        - link "Holiday Setup" [ref=f2e28] [cursor=pointer]:
+          - /url: /LogSetup
+      - listitem [ref=f2e29]:
+        - link "Payroll Components" [ref=f2e30] [cursor=pointer]:
+          - /url: /PayRollValue
+      - listitem [ref=f2e31]:
+        - link "Leave and Dayoff" [ref=f2e32] [cursor=pointer]:
+          - /url: /Timesheet
+      - listitem [ref=f2e33]:
+        - link "Run Payroll" [ref=f2e34] [cursor=pointer]:
+          - /url: /PayRollTransaction
+      - listitem [ref=f2e35]:
+        - link "Report" [ref=f2e36] [cursor=pointer]:
+          - /url: /Report
+      - listitem [ref=f2e37]:
+        - link "Attendance" [ref=f2e38] [cursor=pointer]:
+          - /url: /Attendance
+  - generic [ref=f2e40]:
+    - table [ref=f2e41]:
+      - rowgroup [ref=f2e42]:
+        - row [ref=f2e43]:
+          - cell [ref=f2e44]:
+            - heading "Registration" [level=2] [ref=f2e45]
+          - cell "Branch - Petaling Jaya,Sarawak,Kedah,Penang,Johor Bharu,Negeri Sembilan,Perak,Ipoh,Melaka,Sabah" [ref=f2e46]
+    - generic [ref=f2e49]:
+      - list [ref=f2e50]:
+        - listitem [ref=f2e51]:
+          - link "Uncompleted Employee" [ref=f2e52] [cursor=pointer]:
+            - /url: "#tabstrip-1"
+        - listitem [ref=f2e53]:
+          - link "All Employee" [ref=f2e54] [cursor=pointer]:
+            - /url: "#tabstrip-2"
+        - listitem [ref=f2e55]:
+          - link "Assign Employee To IClock" [ref=f2e56] [cursor=pointer]:
+            - /url: "#tabstrip-3"
+        - listitem [ref=f2e57]:
+          - link "Guard Training" [ref=f2e58] [cursor=pointer]:
+            - /url: "#tabstrip-4"
+        - listitem [ref=f2e59]:
+          - link "Company Registration" [active] [ref=f2e60] [cursor=pointer]:
+            - /url: "#tabstrip-5"
+      - generic [ref=f2e98163]:
+        - table [ref=f2e98164]:
+          - rowgroup [ref=f2e98165]:
+            - row [ref=f2e98166]:
+              - cell [ref=f2e98167]
+            - row [ref=f2e98168]:
+              - cell "Company Info" [ref=f2e98169]
+            - row [ref=f2e98171]:
+              - cell [ref=f2e98172]:
+                - link "Add New Company" [ref=f2e98174] [cursor=pointer]:
+                  - /url: javascript:;
+              - cell [ref=f2e98176]:
+                - link "Export to Excel" [ref=f2e98177] [cursor=pointer]:
+                  - /url: javascript:;
+        - generic [ref=f2e98179]:
+          - generic [ref=f2e98180]: Drag a column header and drop it here to group by that column
+          - table [ref=f2e98183]:
+            - rowgroup [ref=f2e98196]:
+              - row [ref=f2e98197]:
+                - columnheader [ref=f2e98198]:
+                  - link "#" [ref=f2e98201] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=Index-asc
+                - columnheader [ref=f2e98202]:
+                  - link "Company Name" [ref=f2e98205] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=CompanyName-asc
+                - columnheader [ref=f2e98206]:
+                  - link "Registration No" [ref=f2e98209] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=RegistrationNo-asc
+                - columnheader [ref=f2e98210]:
+                  - link "Company Address" [ref=f2e98213] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=ComAddress-asc
+                - columnheader [ref=f2e98214]:
+                  - link "Company Tax No" [ref=f2e98217] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=CompanyTaxNo-asc
+                - columnheader [ref=f2e98218]:
+                  - link "Employer Tax No" [ref=f2e98221] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=EmployerTaxNo-asc
+                - columnheader [ref=f2e98222]:
+                  - link "Company EPF No" [ref=f2e98225] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=CompanyEPFNo-asc
+                - columnheader [ref=f2e98226]:
+                  - link "Company SOCSO No" [ref=f2e98229] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=CompanySOCSONo-asc
+                - columnheader [ref=f2e98230]:
+                  - link "Organisation Con" [ref=f2e98233] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=OrganisationCon-asc
+                - columnheader [ref=f2e98234]:
+                  - link "Phn No" [ref=f2e98237] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=PhnNo-asc
+                - columnheader [ref=f2e98238]:
+                  - link "Action" [ref=f2e98241] [cursor=pointer]:
+                    - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736&CompanyGrid-sort=Id-asc
+          - table [ref=f2e98243]:
+            - rowgroup [ref=f2e98256]:
+              - row [ref=f2e98257]:
+                - cell "1" [ref=f2e98258]
+                - cell "MULTI MERIDIAN SDN BHD" [ref=f2e98259]
+                - cell "793544-H" [ref=f2e98260]
+                - cell "NO 50-3,PLAZA DAMANSARA , JALAN MEDAN SETIA 2,50490 KL" [ref=f2e98261]
+                - cell "C21593001000" [ref=f2e98262]
+                - cell "E0092940301" [ref=f2e98263]
+                - cell "017655248" [ref=f2e98264]
+                - cell "B3200079884V" [ref=f2e98265]
+                - cell "1" [ref=f2e98266]
+                - cell "0320118686" [ref=f2e98267]
+                - cell [ref=f2e98268]:
+                  - link "Edit" [ref=f2e98269] [cursor=pointer]:
+                    - /url: javascript:;
+                  - link "Add Bank Details" [ref=f2e98271] [cursor=pointer]:
+                    - /url: javascript:;
+                  - link "Add HR Details" [ref=f2e98273] [cursor=pointer]:
+                    - /url: javascript:;
+              - row [ref=f2e98275]:
+                - cell "2" [ref=f2e98276]
+                - cell "MULTI MERIDIAN SDN BHD" [ref=f2e98277]
+                - cell "793544-H" [ref=f2e98278]
+                - cell "NO 50-3,PLAZA DAMANSARA , JLN MEDAN SETIA 2,50490 KL" [ref=f2e98279]
+                - cell "C21593001000" [ref=f2e98280]
+                - cell "E0092940301" [ref=f2e98281]
+                - cell "017655248" [ref=f2e98282]
+                - cell "B3200079884V" [ref=f2e98283]
+                - cell "1" [ref=f2e98284]
+                - cell "60320118137" [ref=f2e98285]
+                - cell [ref=f2e98286]:
+                  - link "Edit" [ref=f2e98287] [cursor=pointer]:
+                    - /url: javascript:;
+                  - link "Add Bank Details" [ref=f2e98289] [cursor=pointer]:
+                    - /url: javascript:;
+                  - link "Add HR Details" [ref=f2e98291] [cursor=pointer]:
+                    - /url: javascript:;
+          - generic [ref=f2e98293]:
+            - link "seek-w" [ref=f2e98294]:
+              - /url: "#"
+            - link "arrow-w" [ref=f2e98296]:
+              - /url: "#"
+            - list [ref=f2e98298]:
+              - listitem [ref=f2e98299]:
+                - generic [ref=f2e98300]: "0"
+            - link "arrow-e" [ref=f2e98301]:
+              - /url: "#"
+            - link "seek-e" [ref=f2e98303]:
+              - /url: "#"
+            - generic [ref=f2e98305]:
+              - generic [ref=f2e98307] [cursor=pointer]:
+                - generic [ref=f2e98308]: "500"
+                - generic [ref=f2e98309]: select
+              - text: items per page
+            - link "Refresh" [ref=f2e98311] [cursor=pointer]:
+              - /url: /Registration/Company_Read?ParamValue=CompanyRegistration&PartialViewName=CompanyRegistrationIndex&_=1790763920736
+            - generic [ref=f2e98313]: No items to display
+  - contentinfo [ref=f2e174]:
+    - paragraph [ref=f2e176]: © 2026 - HRSystem

@@ -1,0 +1,43 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - table [ref=e3]:
+      - rowgroup [ref=e4]:
+        - row [ref=e5]:
+          - cell [ref=e6]:
+            - paragraph [ref=e8]:
+              - link "CONTRACT AND ROSTER -V2.1- Multi Meridian Sdn Bhd" [ref=e9] [cursor=pointer]:
+                - /url: /
+          - cell [ref=e12]:
+            - list [ref=e14]:
+              - listitem [ref=e15]:
+                - link "Log in" [ref=e16] [cursor=pointer]:
+                  - /url: /Account/Login
+              - listitem [ref=e17]:
+                - link "Account" [ref=e18] [cursor=pointer]:
+                  - /url: /Account
+    - generic:
+      - navigation:
+        - list
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - heading "Log in." [level=1] [ref=e22]
+      - heading "Enter your user name and password below." [level=2] [ref=e23]
+    - generic [ref=e24]:
+      - group [ref=e25]:
+        - list [ref=e26]:
+          - listitem [ref=e27]:
+            - generic [ref=e28]: User name
+            - textbox "User name" [ref=e29]
+          - listitem [ref=e30]:
+            - generic [ref=e31]: Password
+            - textbox "Password" [ref=e32]
+          - listitem [ref=e33]:
+            - checkbox "Remember me?" [ref=e34]
+            - text: Remember me?
+        - button "Log in" [ref=e35] [cursor=pointer]
+      - paragraph [ref=e36]:
+        - link "Register" [ref=e37] [cursor=pointer]:
+          - /url: /Account/Register
+        - text: if you don't have an account.
+  - contentinfo [ref=e38]:
+    - paragraph [ref=e40]: © 2026 - CNR

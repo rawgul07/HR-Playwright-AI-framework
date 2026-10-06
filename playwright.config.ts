@@ -3,9 +3,9 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   timeout: 30 * 1000,   //30000 ms(30 secs)
   testDir: './tests',
-  fullyParallel: true,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  fullyParallel: false,
+  retries: 0,
+  workers: 1,
   reporter: [
     ['list'],                           // Detailed console output
     //['line'],                         // One-line progress output

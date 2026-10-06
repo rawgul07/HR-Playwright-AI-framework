@@ -1,0 +1,73 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - table [ref=f1e3]:
+      - rowgroup [ref=f1e4]:
+        - row [ref=f1e5]:
+          - cell [ref=f1e6]:
+            - paragraph [ref=f1e8]:
+              - link "HR SYSTEM -V2.1-Safeguards Cambodia" [ref=f1e9] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f1e10]: HR SYSTEM
+                - generic [ref=f1e11]: "-V2.1"
+                - generic [ref=f1e12]: "-Safeguards Cambodia"
+          - cell [ref=f1e13]:
+            - paragraph [ref=f1e15]:
+              - text: Hello,
+              - link "superuser" [ref=f1e16] [cursor=pointer]:
+                - /url: /Account/ChangePassword
+              - text: "!"
+              - link "Log off" [ref=f1e17] [cursor=pointer]:
+                - /url: /Account/LogOff
+              - link "Account" [ref=f1e18] [cursor=pointer]:
+                - /url: /Account
+    - list [ref=f1e20]:
+      - listitem [ref=f1e21]:
+        - link "Home" [ref=f1e22] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=f1e23]:
+        - link "Registration" [ref=f1e24] [cursor=pointer]:
+          - /url: /Registration
+      - listitem [ref=f1e25]:
+        - link "Setup" [ref=f1e26] [cursor=pointer]:
+          - /url: /SetUp
+      - listitem [ref=f1e27]:
+        - link "Holiday Setup" [ref=f1e28] [cursor=pointer]:
+          - /url: /LogSetup
+      - listitem [ref=f1e29]:
+        - link "Payroll Components" [ref=f1e30] [cursor=pointer]:
+          - /url: /PayRollValue
+      - listitem [ref=f1e31]:
+        - link "Leave and Dayoff" [ref=f1e32] [cursor=pointer]:
+          - /url: /Timesheet
+      - listitem [ref=f1e33]:
+        - link "Run Payroll" [ref=f1e34] [cursor=pointer]:
+          - /url: /PayRollTransaction
+      - listitem [ref=f1e35]:
+        - link "Report" [ref=f1e36] [cursor=pointer]:
+          - /url: /Report
+      - listitem [ref=f1e37]:
+        - link "Attendance" [ref=f1e38] [cursor=pointer]:
+          - /url: /Attendance
+  - generic [ref=f1e41]:
+    - table [ref=f1e43]:
+      - rowgroup [ref=f1e44]:
+        - row [ref=f1e45]:
+          - cell "Welcome" [ref=f1e46]
+          - cell "Branch* All select" [ref=f1e48]:
+            - generic [ref=f1e49]: Branch*
+            - generic [ref=f1e53]:
+              - textbox "Select Branch ..." [ref=f1e54]: All
+              - generic [ref=f1e55]: select
+        - row [ref=f1e57]:
+          - cell [ref=f1e58]:
+            - generic [ref=f1e61]:
+              - text: "[NOTE : Please Choose '"
+              - emphasis [ref=f1e62]: Branch
+              - text: "' ..!]"
+    - table [ref=f1e64]:
+      - rowgroup [ref=f1e65]:
+        - row [ref=f1e66]:
+          - cell "Exceptional Dashboard" [ref=f1e67]
+          - cell "Training Dashboard" [ref=f1e68]
+  - contentinfo [ref=f1e69]:
+    - paragraph [ref=f1e71]: © 2026 - HRSystem

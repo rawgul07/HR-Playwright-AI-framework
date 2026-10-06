@@ -1,0 +1,147 @@
+- generic [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - table [ref=f2e3]:
+      - rowgroup [ref=f2e4]:
+        - row [ref=f2e5]:
+          - cell [ref=f2e6]:
+            - paragraph [ref=f2e8]:
+              - link "HR SYSTEM -V2.1-MULTI MERIDIAN SDN BHD" [ref=f2e9] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f2e10]: HR SYSTEM
+                - generic [ref=f2e11]: "-V2.1"
+                - generic [ref=f2e12]: "-MULTI MERIDIAN SDN BHD"
+          - cell [ref=f2e13]:
+            - paragraph [ref=f2e15]:
+              - text: Hello,
+              - link "Superuser" [ref=f2e16] [cursor=pointer]:
+                - /url: /Account/ChangePassword
+              - text: "!"
+              - link "Log off" [ref=f2e17] [cursor=pointer]:
+                - /url: /Account/LogOff
+              - link "Account" [ref=f2e18] [cursor=pointer]:
+                - /url: /Account
+    - list [ref=f2e20]:
+      - listitem [ref=f2e21]:
+        - link "Home" [ref=f2e22] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=f2e23]:
+        - link "Registration" [ref=f2e24] [cursor=pointer]:
+          - /url: /Registration
+      - listitem [ref=f2e25]:
+        - link "Setup" [ref=f2e26] [cursor=pointer]:
+          - /url: /SetUp
+      - listitem [ref=f2e27]:
+        - link "Holiday Setup" [ref=f2e28] [cursor=pointer]:
+          - /url: /LogSetup
+      - listitem [ref=f2e29]:
+        - link "Payroll Components" [ref=f2e30] [cursor=pointer]:
+          - /url: /PayRollValue
+      - listitem [ref=f2e31]:
+        - link "Leave and Dayoff" [ref=f2e32] [cursor=pointer]:
+          - /url: /Timesheet
+      - listitem [ref=f2e33]:
+        - link "Run Payroll" [ref=f2e34] [cursor=pointer]:
+          - /url: /PayRollTransaction
+      - listitem [ref=f2e35]:
+        - link "Report" [ref=f2e36] [cursor=pointer]:
+          - /url: /Report
+      - listitem [ref=f2e37]:
+        - link "Attendance" [ref=f2e38] [cursor=pointer]:
+          - /url: /Attendance
+  - generic [ref=f2e40]:
+    - table [ref=f2e41]:
+      - rowgroup [ref=f2e42]:
+        - row [ref=f2e43]:
+          - cell [ref=f2e44]:
+            - heading "Registration" [level=2] [ref=f2e45]
+          - cell "Branch - Petaling Jaya,Sarawak,Kedah,Penang,Johor Bharu,Negeri Sembilan,Perak,Ipoh,Melaka,Sabah" [ref=f2e46]
+    - generic [ref=f2e49]:
+      - list [ref=f2e50]:
+        - listitem [ref=f2e51]:
+          - link "Uncompleted Employee" [ref=f2e52] [cursor=pointer]:
+            - /url: "#tabstrip-1"
+        - listitem [ref=f2e53]:
+          - link "All Employee" [ref=f2e54] [cursor=pointer]:
+            - /url: "#tabstrip-2"
+        - listitem [ref=f2e55]:
+          - link "Assign Employee To IClock" [ref=f2e56] [cursor=pointer]:
+            - /url: "#tabstrip-3"
+        - listitem [ref=f2e57]:
+          - link "Guard Training" [active] [ref=f2e58] [cursor=pointer]:
+            - /url: "#tabstrip-4"
+        - listitem [ref=f2e59]:
+          - link "Company Registration" [ref=f2e60] [cursor=pointer]:
+            - /url: "#tabstrip-5"
+      - generic [ref=f2e180]:
+        - list [ref=f2e181]:
+          - listitem [ref=f2e182]:
+            - link "Single Guard Training" [ref=f2e183] [cursor=pointer]:
+              - /url: "#guardtrainingtabstrip-1"
+          - listitem [ref=f2e184]:
+            - link "Multiple Guard Training" [ref=f2e185] [cursor=pointer]:
+              - /url: "#guardtrainingtabstrip-2"
+        - generic [ref=f2e187]:
+          - table [ref=f2e188]:
+            - rowgroup [ref=f2e189]:
+              - row [ref=f2e190]:
+                - cell [ref=f2e191]:
+                  - link "Add New" [ref=f2e193] [cursor=pointer]:
+                    - /url: javascript:;
+          - generic [ref=f2e195]:
+            - generic [ref=f2e196]: Drag a column header and drop it here to group by that column
+            - table [ref=f2e199]:
+              - rowgroup [ref=f2e210]:
+                - row [ref=f2e211]:
+                  - columnheader [ref=f2e212]:
+                    - link "#" [ref=f2e215] [cursor=pointer]:
+                      - /url: /Registration/GuardTraining_Read?ParamValue=SingleGuardTraining&PartialViewName=GuardTrainingIndex&_=1790764343476&GuardTrainingGrid-sort=Index-asc
+                  - columnheader [ref=f2e216]:
+                    - link "Guard No" [ref=f2e219] [cursor=pointer]:
+                      - /url: /Registration/GuardTraining_Read?ParamValue=SingleGuardTraining&PartialViewName=GuardTrainingIndex&_=1790764343476&GuardTrainingGrid-sort=EmployeeNo-asc
+                  - columnheader [ref=f2e220]:
+                    - link "Guard Name" [ref=f2e223] [cursor=pointer]:
+                      - /url: /Registration/GuardTraining_Read?ParamValue=SingleGuardTraining&PartialViewName=GuardTrainingIndex&_=1790764343476&GuardTrainingGrid-sort=EmployeeName-asc
+                  - columnheader [ref=f2e224]:
+                    - link "Training" [ref=f2e227] [cursor=pointer]:
+                      - /url: /Registration/GuardTraining_Read?ParamValue=SingleGuardTraining&PartialViewName=GuardTrainingIndex&_=1790764343476&GuardTrainingGrid-sort=TrainingName-asc
+                  - columnheader [ref=f2e228]:
+                    - link "Training From" [ref=f2e231] [cursor=pointer]:
+                      - /url: /Registration/GuardTraining_Read?ParamValue=SingleGuardTraining&PartialViewName=GuardTrainingIndex&_=1790764343476&GuardTrainingGrid-sort=StartDate-asc
+                  - columnheader [ref=f2e232]:
+                    - link "Training To" [ref=f2e235] [cursor=pointer]:
+                      - /url: /Registration/GuardTraining_Read?ParamValue=SingleGuardTraining&PartialViewName=GuardTrainingIndex&_=1790764343476&GuardTrainingGrid-sort=EndDate-asc
+                  - columnheader [ref=f2e236]:
+                    - link "Training Expiry" [ref=f2e239] [cursor=pointer]:
+                      - /url: /Registration/GuardTraining_Read?ParamValue=SingleGuardTraining&PartialViewName=GuardTrainingIndex&_=1790764343476&GuardTrainingGrid-sort=ExpiryDate-asc
+                  - columnheader [ref=f2e240]:
+                    - link "Action" [ref=f2e243] [cursor=pointer]:
+                      - /url: /Registration/GuardTraining_Read?ParamValue=SingleGuardTraining&PartialViewName=GuardTrainingIndex&_=1790764343476&GuardTrainingGrid-sort=Id-asc
+                  - columnheader [ref=f2e244]:
+                    - link "Action" [ref=f2e247] [cursor=pointer]:
+                      - /url: /Registration/GuardTraining_Read?ParamValue=SingleGuardTraining&PartialViewName=GuardTrainingIndex&_=1790764343476&GuardTrainingGrid-sort=Id-asc
+            - table [ref=f2e249]:
+              - rowgroup [ref=f2e260]:
+                - row [ref=f2e261]:
+                  - cell [ref=f2e262]
+            - generic [ref=f2e263]:
+              - link "seek-w" [ref=f2e264]:
+                - /url: "#"
+              - link "arrow-w" [ref=f2e266]:
+                - /url: "#"
+              - list [ref=f2e268]:
+                - listitem [ref=f2e269]:
+                  - generic [ref=f2e270]: "0"
+              - link "arrow-e" [ref=f2e271]:
+                - /url: "#"
+              - link "seek-e" [ref=f2e273]:
+                - /url: "#"
+              - generic [ref=f2e275]:
+                - generic [ref=f2e277] [cursor=pointer]:
+                  - generic [ref=f2e278]: "100"
+                  - generic [ref=f2e279]: select
+                - text: items per page
+              - link "Refresh" [ref=f2e281] [cursor=pointer]:
+                - /url: /Registration/GuardTraining_Read?ParamValue=SingleGuardTraining&PartialViewName=GuardTrainingIndex&_=1790764343476
+              - generic [ref=f2e283]: No items to display
+  - contentinfo [ref=f2e174]:
+    - paragraph [ref=f2e176]: © 2026 - HRSystem

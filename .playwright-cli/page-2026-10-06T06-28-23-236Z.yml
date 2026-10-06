@@ -1,0 +1,40 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - table [ref=e3]:
+      - rowgroup [ref=e4]:
+        - row [ref=e5]:
+          - cell [ref=e6]:
+            - paragraph [ref=e8]:
+              - link "HR SYSTEM -V2.1-Safeguards Cambodia" [ref=e9] [cursor=pointer]:
+                - /url: /
+                - generic [ref=e10]: HR SYSTEM
+                - generic [ref=e11]: "-V2.1"
+                - generic [ref=e12]: "-Safeguards Cambodia"
+          - cell [ref=e13]:
+            - list [ref=e15]:
+              - listitem [ref=e16]:
+                - link "Log in" [ref=e17] [cursor=pointer]:
+                  - /url: /Account/Login
+  - generic [ref=e19]:
+    - generic [ref=e20]:
+      - heading "Log in." [level=1] [ref=e21]
+      - heading "Enter your user name and password below." [level=2] [ref=e22]
+    - generic [ref=e23]:
+      - group [ref=e24]:
+        - list [ref=e25]:
+          - listitem [ref=e26]:
+            - generic [ref=e27]: User name
+            - textbox "User name" [ref=e28]
+          - listitem [ref=e29]:
+            - generic [ref=e30]: Password
+            - textbox "Password" [ref=e31]
+          - listitem [ref=e32]:
+            - checkbox "Remember me?" [ref=e33]
+            - text: Remember me?
+        - button "Log in" [ref=e34] [cursor=pointer]
+      - paragraph [ref=e35]:
+        - link "Register" [ref=e36] [cursor=pointer]:
+          - /url: /Account/Register
+        - text: if you don't have an account.
+  - contentinfo [ref=e37]:
+    - paragraph [ref=e39]: © 2026 - HRSystem

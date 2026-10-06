@@ -1,0 +1,78 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - table [ref=f1e3]:
+      - rowgroup [ref=f1e4]:
+        - row [ref=f1e5]:
+          - cell [ref=f1e6]:
+            - paragraph [ref=f1e8]:
+              - link "CONTRACT AND ROSTER -V2.1- Multi Meridian Sdn Bhd" [ref=f1e9] [cursor=pointer]:
+                - /url: /
+          - cell [ref=f1e12]:
+            - paragraph [ref=f1e14]:
+              - text: Hello,
+              - link "Superuser" [ref=f1e15] [cursor=pointer]:
+                - /url: /Account/ChangePassword
+              - text: "!"
+              - link "Log off" [ref=f1e16] [cursor=pointer]:
+                - /url: /Account/LogOff
+              - link "Account" [ref=f1e17] [cursor=pointer]:
+                - /url: /Account
+    - navigation [ref=f1e19]:
+      - list [ref=f1e20]:
+        - listitem [ref=f1e21]:
+          - link "Home" [ref=f1e22] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f1e23]:
+          - link "Registration" [ref=f1e24] [cursor=pointer]:
+            - /url: /Registration
+        - listitem [ref=f1e25]:
+          - link "Roster Timesheet" [ref=f1e26] [cursor=pointer]:
+            - /url: /RosterTimesheet
+        - listitem [ref=f1e27]:
+          - link "CIT" [ref=f1e28] [cursor=pointer]:
+            - /url: /CIT
+        - listitem [ref=f1e29]:
+          - link "Invoice" [ref=f1e30] [cursor=pointer]:
+            - /url: /Invoice
+        - listitem [ref=f1e31]:
+          - link "Setup" [ref=f1e32] [cursor=pointer]:
+            - /url: /Setup
+        - listitem [ref=f1e33]:
+          - link "Costing" [ref=f1e34] [cursor=pointer]:
+            - /url: /Costing
+        - listitem [ref=f1e35]:
+          - link "Report" [ref=f1e36] [cursor=pointer]:
+            - /url: /Report
+        - listitem [ref=f1e37]:
+          - link "MobileApp" [ref=f1e38] [cursor=pointer]:
+            - /url: /Home/MobileAppIndex
+  - generic [ref=f1e41]:
+    - table [ref=f1e43]:
+      - rowgroup [ref=f1e44]:
+        - row [ref=f1e45]:
+          - cell "Welcome!!!" [ref=f1e46]
+          - 'cell "Branch All select [NOTE : Please Choose '' Branch'' To Proceed ..!]" [ref=f1e48]':
+            - generic [ref=f1e49]: Branch
+            - generic [ref=f1e51]:
+              - generic [ref=f1e53]:
+                - textbox "Select Branch ..." [ref=f1e54]: All
+                - generic [ref=f1e55]: select
+              - generic [ref=f1e58]:
+                - text: "[NOTE : Please Choose '"
+                - emphasis [ref=f1e59]: Branch
+                - text: "' To Proceed ..!]"
+    - table [ref=f1e61]:
+      - rowgroup [ref=f1e62]:
+        - row [ref=f1e63]:
+          - cell [ref=f1e64]
+          - cell "Home" [ref=f1e65]
+          - cell "Biometric DashBoard" [ref=f1e66]
+          - cell "Individual Operation" [ref=f1e67]
+          - cell "Pending Roster Summary" [ref=f1e68]
+          - cell "Manpower Dashboard" [ref=f1e69]
+          - cell "Shortage Module" [ref=f1e70]
+          - cell "Smart Claim" [ref=f1e71]
+          - cell "App Trip Sheet" [ref=f1e72]
+    - generic [ref=f1e73]: Loading.. Please wait...
+  - contentinfo [ref=f1e74]:
+    - paragraph [ref=f1e76]: © 2026 - CNR
